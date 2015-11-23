@@ -1,0 +1,10 @@
+version: 1.0
+shards:
+  crystal_lib:
+    github: manastech/crystal_lib
+    version: HEAD
+
+  minitest:
+    github: ysbaddaden/minitest.cr
+    version: 0.1.5
+

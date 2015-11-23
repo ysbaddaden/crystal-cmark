@@ -1,0 +1,14 @@
+name: common_mark
+version: 0.1.0
+
+development_dependencies:
+  crystal_lib:
+    github: manastech/crystal_lib
+
+  minitest:
+    github: ysbaddaden/minitest.cr
+
+scripts:
+  postinstall: cd ext && make
+
+license: BSD-2-Clause
