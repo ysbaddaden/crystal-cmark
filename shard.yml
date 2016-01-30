@@ -1,5 +1,6 @@
 name: common_mark
 version: 0.1.0
+description: libcmark bindings, the reference CommonMark C library
 
 development_dependencies:
   crystal_lib:

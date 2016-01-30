@@ -1,4 +1,4 @@
-VERSION ?= 0.22.0
+VERSION ?= 0.24.1
 CMARK = cmark-$(VERSION)
 SOURCES = $(wildcard $(CMARK)/src/*.c) $(wildcard $(CMARK)/src/*.h)
 
@@ -14,4 +14,7 @@ $(CMARK):
 	curl -L https://github.com/jgm/cmark/archive/$(VERSION).tar.gz | tar zx
 
 clean:
-	rm -rf $(CMARK) *.a *.h
+	rm -rf cmark-*
+
+distclean: clean
+	rm -rf *.a *.h

@@ -9,14 +9,13 @@ lib LibCmark
   fun render_commonmark = cmark_render_commonmark(root : CmarkNode, options : LibC::Int, width : LibC::Int) : LibC::Char*
   fun render_latex = cmark_render_latex(root : CmarkNode, options : LibC::Int, width : LibC::Int) : LibC::Char*
   OPT_DEFAULT = 0
-  OPT_SOURCEPOS = 1
-  OPT_HARDBREAKS = 2
-  OPT_NORMALIZE = 4
-  OPT_SMART = 8
-  OPT_VALIDATE_UTF8 = 16
-  OPT_SAFE = 32
-  VERSION = (((0 << 16) |   22 << 8
-) | 0)
-  VERSION_STRING = "0.22.0"
+  OPT_SOURCEPOS = (1 << 1)
+  OPT_HARDBREAKS = (1 << 2)
+  OPT_NORMALIZE = (1 << 8)
+  OPT_SMART = (1 << 10)
+  OPT_VALIDATE_UTF8 = (1 << 9)
+  OPT_SAFE = (1 << 3)
+  VERSION = (((0 << 16) | (24 << 8)) | 1)
+  VERSION_STRING = "0.24.1"
 end
 

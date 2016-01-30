@@ -5,7 +5,7 @@ all: src/ext/libcmark.a src/lib_cmark.cr
 src/ext/libcmark.a:
 	cd src/ext && make
 
-src/lib_cmark.cr: src/lib_cmark.cr.in
+src/lib_cmark.cr: src/lib_cmark.cr.in src/ext/*.h
 	crystal ./libs/crystal_lib/main.cr -- src/lib_cmark.cr.in > src/lib_cmark.cr
 	sed -i 's/.\/ext/#{__DIR__}\/ext/' src/lib_cmark.cr
 

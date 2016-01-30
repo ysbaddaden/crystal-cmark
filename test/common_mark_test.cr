@@ -31,7 +31,7 @@ class CommonMarkTest < Minitest::Test
 
   def test_to_commonmark
     commonmark = CommonMark.new(TEXT).to_commonmark
-    assert_equal "# title\n\nsome body\n\n* item 1\n* <strong>item 2</strong>\n", commonmark
+    assert_equal "# title\n\nsome body\n\n  - item 1\n  - <strong>item 2</strong>\n", commonmark
   end
 
   def test_to_html
@@ -61,6 +61,6 @@ class CommonMarkTest < Minitest::Test
 
   def test_to_xml
     xml = CommonMark.new(TEXT).to_xml
-    assert_match "<header level=\"1\">\n    <text>title</text>\n  </header>", xml
+    assert_match "<heading level=\"1\">\n    <text>title</text>\n  </heading>", xml
   end
 end
