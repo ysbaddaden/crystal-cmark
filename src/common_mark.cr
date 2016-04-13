@@ -13,7 +13,7 @@ require "./lib_cmark"
 # ```
 class CommonMark
   # The original markdown text.
-  getter :text
+  getter text : String
 
   # Initializes a new CommonMark parser.
   #

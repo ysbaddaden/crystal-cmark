@@ -2,9 +2,9 @@ version: 1.0
 shards:
   crystal_lib:
     github: manastech/crystal_lib
-    commit: 8cf2aeff36792910bd5d0fb7c53449316bbf044b
+    commit: 885329575ef11a9b667850fa6edbc2979713e8ea
 
   minitest:
     github: ysbaddaden/minitest.cr
-    version: 0.3.1
+    commit: 60215ad0e1a88b1625f1d90fec4048deb1ad7847
 

@@ -8,6 +8,7 @@ development_dependencies:
 
   minitest:
     github: ysbaddaden/minitest.cr
+    branch: fix-ivars
 
 scripts:
   postinstall: cd ext && make
