@@ -1,4 +1,4 @@
-@[Link(ldflags: "-L#{__DIR__}/ext -lcmark")]
+@[Link(ldflags: "-L#{__DIR__}/../ext -lcmark")]
 lib LibCmark
   type CmarkNode = Void*
   fun node_free = cmark_node_free(node : CmarkNode)

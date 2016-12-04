@@ -1,5 +1,5 @@
-@[Include("cmark.h", flags: "-Isrc/ext")]
-@[Link(ldflags: "-L#{__DIR__}/ext -lcmark")]
+@[Include("cmark.h", flags: "-Iext")]
+@[Link(ldflags: "-L#{__DIR__}/../ext -lcmark")]
 lib LibCmark
   #fun markdown_to_html = cmark_markdown_to_html
 

@@ -8,9 +8,10 @@ development_dependencies:
 
   minitest:
     github: ysbaddaden/minitest.cr
-    branch: fix-ivars
 
 scripts:
   postinstall: cd ext && make
+
+crystal: 0.20.0
 
 license: BSD-2-Clause
