@@ -4,8 +4,7 @@ Crystal wrapper for libcmark, the reference CommonMark C library.
 
 ## Install
 
-Add the dependency to `shard.lock`, then run `crystal deps install`
-(or `shards install`):
+Add the dependency to `shard.yml` then run `shards install`:
 
 ```yaml
 dependencies:
@@ -13,7 +12,7 @@ dependencies:
     github: ysbaddaden/crystal-cmark
 ```
 
-This should automatically download and compile libcmark.
+This will automatically download and compile libcmark.
 
 ## Usage
 
