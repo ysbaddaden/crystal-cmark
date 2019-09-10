@@ -14,8 +14,8 @@ lib LibCmark
   OPT_NORMALIZE = (1 << 8)
   OPT_SMART = (1 << 10)
   OPT_VALIDATE_UTF8 = (1 << 9)
-  OPT_SAFE = (1 << 3)
-  VERSION = (((0 << 16) | (28 << 8)) | 3)
-  VERSION_STRING = "0.28.3"
+  OPT_UNSAFE = (1 << 17)
+  VERSION = (((0 << 16) | (29 << 8)) | 0)
+  VERSION_STRING = "0.29.0"
 end
 

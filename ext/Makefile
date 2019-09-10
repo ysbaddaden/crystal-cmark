@@ -1,4 +1,4 @@
-VERSION ?= 0.28.3
+VERSION ?= 0.29.0
 CMARK = cmark-$(VERSION)
 SOURCES = $(wildcard $(CMARK)/src/*.c) $(wildcard $(CMARK)/src/*.h)
 

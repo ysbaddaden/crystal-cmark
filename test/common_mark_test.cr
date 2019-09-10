@@ -17,15 +17,15 @@ class CommonMarkTest < Minitest::Test
     refute md.hardbreaks?
     refute md.normalize?
     refute md.smart?
-    refute md.safe?
+    refute md.unsafe?
 
     md = CommonMark.new("", sourcepos: true, hardbreaks: true, normalize: true,
-                        smart: true, safe: true, validate_utf8: true)
+                        smart: true, unsafe: true, validate_utf8: true)
     assert md.sourcepos?
     assert md.hardbreaks?
     assert md.normalize?
     assert md.smart?
-    assert md.safe?
+    assert md.unsafe?
     assert md.validate_utf8?
   end
 
@@ -39,10 +39,10 @@ class CommonMarkTest < Minitest::Test
     assert_match "<h1>title</h1>", html
     assert_match "<p>some\nbody</p>", html
     assert_match "<li>item 1</li>", html
-    assert_match "<li><strong>item 2</strong></li>", html
+    assert_match "<li><!-- raw HTML omitted -->item 2<!-- raw HTML omitted --></li>", html
 
-    safe_html = CommonMark.new(TEXT, safe: true).to_html
-    assert_match "<li><!-- raw HTML omitted -->item 2<!-- raw HTML omitted --></li>", safe_html
+    unsafe_html = CommonMark.new(TEXT, unsafe: true).to_html
+    assert_match "<li><strong>item 2</strong></li>", unsafe_html
   end
 
   def test_to_latex
@@ -60,7 +60,7 @@ class CommonMarkTest < Minitest::Test
   end
 
   def test_to_xml
-    xml = CommonMark.new(TEXT).to_xml
-    assert_match "<heading level=\"1\">\n    <text>title</text>\n  </heading>", xml
+    xml = CommonMark.new(TEXT, unsafe: true).to_xml
+    assert_match %(<heading level=\"1\">\n    <text xml:space="preserve">title</text>\n  </heading>), xml
   end
 end
