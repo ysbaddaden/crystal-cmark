@@ -1,5 +1,5 @@
 name: common_mark
-version: 0.2.0
+version: 0.3.0
 description: libcmark bindings, the reference CommonMark C library
 
 development_dependencies:
