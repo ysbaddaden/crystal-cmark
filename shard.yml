@@ -8,6 +8,7 @@ development_dependencies:
 
   minitest:
     github: ysbaddaden/minitest.cr
+    version: ">= 0.5.0"
 
 scripts:
   postinstall: cd ext && make

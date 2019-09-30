@@ -6,9 +6,9 @@ shards:
 
   crystal_lib:
     github: manastech/crystal_lib
-    commit: 300d89edda6bc000ad977cdec90b84f79a3ff2ad
+    commit: 85421997dd176e289d76a369b796fa96c42a3018
 
   minitest:
     github: ysbaddaden/minitest.cr
-    version: 0.4.3
+    version: 0.5.0
 
